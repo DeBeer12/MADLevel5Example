@@ -7,7 +7,7 @@ import androidx.room.*
 interface ReminderDao {
 
     @Query("SELECT * FROM reminderTable")
-    suspend fun getAllReminders(): LiveData<List<Reminder>>
+    fun getAllReminders(): LiveData<List<Reminder>>
 
     @Insert
     suspend fun insertReminder(reminder: Reminder)
